@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: Poppins_400Regular;
+  }
+
+  /* Fix browser autofill styling for white theme inputs */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #F8FAFC inset !important;
+    -webkit-text-fill-color: #0F172A !important;
+    caret-color: #0F172A;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  /* Remove browser focus ring / outline */
+  input:focus,
+  textarea:focus,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
